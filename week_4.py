@@ -28,5 +28,24 @@ result = [3,3]
 """
 
 
-def search_in_matrix(matrix, target):
-    pass
+def search_in_matrix(matx, trgt):
+    for r_idx in range(len(matx)):
+        c_idx = 0
+        while c_idx < len(matx[0]) and matx[r_idx][c_idx] <= trgt :
+            if matx[r_idx][c_idx] == trgt:
+                return [r_idx, c_idx]
+            c_idx +=1
+    return [-1,-1]
+
+matrix = [
+[1,4,7,12,15,1000],
+[2,5,19,31,32,1001],
+[3,8,24,33,35,1002],
+[40,41,42,44,45,1003],
+[99,100,103,106,128,1004]
+]
+
+target =44
+
+print(search_in_matrix(matrix, target))
+
