@@ -49,3 +49,20 @@ target =44
 
 print(search_in_matrix(matrix, target))
 
+targets = [
+    44,
+    128,
+    0,
+    -1,
+    1,
+    1001,
+    1000,
+    1004,
+]
+
+for target in targets:
+    print(search_in_matrix(matrix, target))
+
+# Nice work! Can you think of a way to make it more efficient relying
+# on the fact they're sorted?
+# Lost 1 mark we'd like to see some extra tests (target/matrix)
